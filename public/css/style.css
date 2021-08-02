@@ -1,0 +1,62 @@
+body, html, aside.main-sidebar{
+    height: 100%;
+}
+
+.input-custom{
+    background-color: #FAFAFA;
+    border-radius: 42px;    
+    border: none;    
+}
+
+.input-custom:focus{
+    outline: none;  
+}
+
+.custom-btn{
+    border-radius: 42px;    
+}
+
+.color-primary{
+    background-color: #FEBD2E;
+}
+
+.custom-card{
+    border-radius: 25px;
+}
+
+aside.main-sidebar{
+    width: 300px;
+    background-color: #fff;
+}
+
+aside.main-sidebar.mini{
+    width: 100px;
+    background-color: #fff;
+}
+
+aside.main-sidebar.mini{
+    width: 100px;
+    background-color: #fff;
+}
+
+aside.main-sidebar.mini .list-group-item{
+    border: none;    
+    margin: auto;
+    padding: 12px 0;
+    text-align: center;
+}
+
+aside.main-sidebar .list-group-item{
+    border: none;    
+    margin: auto;
+    padding: 12px 0;    
+}
+
+aside.main-sidebar .list-group-item.active{
+    color: #FEBD2E;
+    background-color: transparent;
+}
+
+aside.main-sidebar .list-group-item.active{
+    
+}

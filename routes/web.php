@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controller\PegawaiController;
-use App\Http\Controller\MenuController;
-use App\Http\Controller\TransaksiController;
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\TransaksiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +25,12 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware(['web', 'auth'])->group(function () {
+    Route::get('/menu', [MenuController::class, 'show'])->name('menu');
 
+    Route::prefix('transaksi')->group(function () {
+        Route::get('/', [TransaksiController::class, 'show'])->name('transaksi');        
+    });
+    
     Route::middleware(['Admin'])->group(function () {
         Route::prefix('user')->group(function () {
             Route::get('/', [PegawaiController::class, 'show'])->name('user');
@@ -36,8 +41,7 @@ Route::middleware(['web', 'auth'])->group(function () {
             Route::delete('delete/{id}', [PegawaiController::class, 'destroy'])->name('destroy_user');            
         });
 
-        Route::prefix('menu')->group(function () {
-            Route::get('/', [MenuController::class, 'show'])->name('menu');
+        Route::prefix('menu')->group(function () {            
             Route::get('create', [MenuController::class, 'create'])->name('create_menu');            
             Route::post('store', [MenuController::class, 'storeMenu'])->name('store_menu');
             Route::get('edit/{id}', [MenuController::class, 'editMenu'])->name('edit_menu');
