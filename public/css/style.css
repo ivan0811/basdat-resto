@@ -2,13 +2,16 @@ body, html, aside.main-sidebar{
     height: 100%;
 }
 
-.input-custom{
-    background-color: #FAFAFA;
-    border-radius: 42px;    
+.custom-textfield{    
     border: none;    
 }
 
-.input-custom:focus{
+.custom-textfield.search{
+    padding: 0px 30px;
+    height: 50px;
+}
+
+.custom-textfield:focus{
     outline: none;  
 }
 
@@ -18,6 +21,35 @@ body, html, aside.main-sidebar{
 
 .color-primary{
     background-color: #FEBD2E;
+}
+
+.primary-text-color{
+    color: #FEBD2E;
+}
+
+.secondary-text-color{
+    color: #ADADAD;
+}
+
+.text--grey{
+    color: #B5B5B5;
+}
+
+.lv-checkbox{
+    border: solid 1px #DBDBDB;
+    border-radius: 5px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+}
+
+.lv-checkbox.active{
+    
+}
+
+.lv-checkbox > input{
+    width: 0;
+    height: 0;
 }
 
 .custom-card{
@@ -59,4 +91,27 @@ aside.main-sidebar .list-group-item.active{
 
 aside.main-sidebar .list-group-item.active{
     
+}
+
+button#plus, button#minus{
+    border: 1px solid #4A4A4A;    
+    padding: 5px;    
+}
+
+button.btn.btn-icon > span{
+    /* margin: 10px; */
+}
+
+aside.sidebar-right{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+aside.sidebar-right .detail-item > div{
+    border-bottom: 1px solid #DBDBDB;        
+}
+
+.detail-overflow-box{
+    overflow-y: auto;    
 }

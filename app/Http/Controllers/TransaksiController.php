@@ -9,7 +9,7 @@ class TransaksiController extends Controller
 {
     public function show(){
         $transaksi = Transaksi::all();
-        return view('kasir.transaksi');
+        return view('kasir.riwayat');
     }
 
     public function create(){

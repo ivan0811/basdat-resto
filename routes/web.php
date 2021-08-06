@@ -5,6 +5,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\TransaksiController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,21 +18,22 @@ use App\Http\Controllers\TransaksiController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/login');
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::middleware(['web', 'auth'])->group(function () {
+Route::middleware(['web', 'auth'])->group(function () {    
     Route::get('/menu', [MenuController::class, 'show'])->name('menu');
 
-    Route::prefix('transaksi')->group(function () {
-        Route::get('/', [TransaksiController::class, 'show'])->name('transaksi');        
+    Route::prefix('riwayat')->group(function () {
+        Route::get('/', [TransaksiController::class, 'show'])->name('riwayat');        
     });
     
     Route::middleware(['Admin'])->group(function () {
+        // Route::get('/', [])->name();
         Route::prefix('user')->group(function () {
             Route::get('/', [PegawaiController::class, 'show'])->name('user');
             Route::get('create', [PegawaiController::class, 'create'])->name('create_user');            

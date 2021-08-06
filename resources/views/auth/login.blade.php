@@ -42,7 +42,7 @@
                                                 <label for="username">Username</label>
                     
                                                 <div class="">
-                                                    <input id="username" placeholder="Masukkan Username" type="text" class="input-custom form-control @error('email') is-invalid @enderror" name="username" value="{{ old('username') }}" required  autofocus>
+                                                    <input id="username" placeholder="Masukkan Username" type="text" class="form-control @error('email') is-invalid @enderror" name="username" value="{{ old('username') }}" required  autofocus>
                     
                                                     @error('email')
                                                         <span class="invalid-feedback" role="alert">
@@ -56,7 +56,7 @@
                                                 <label for="password">Password</label>
                 
                                                 <div class="">
-                                                    <input id="password" type="password" placeholder="Masukkan Password" class="input-custom form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                                    <input id="password" type="password" placeholder="Masukkan Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                     
                                                     @error('password')
                                                         <span class="invalid-feedback" role="alert">
@@ -68,7 +68,7 @@
                                         </div>                                                                                                                                                                                             
                                                         
                                             <div class="d-grid">
-                                                <button type="submit" class="btn custom-btn color-primary" style="width: 100%">
+                                                <button type="submit" class="btn color-primary" style="width: 100%">
                                                     Masuk
                                                 </button>                                                               
                                             </div>                                        

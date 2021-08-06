@@ -9,8 +9,8 @@ use App\Models\Menu;
 class MenuController extends Controller
 {
     public function show(){
-        $menu = Menu::all();    
-        $kuah = Kuah::all();
+        $menu = Menu::with('kuah');           
+        return view('kasir.menu', compact('menu'));
     }
 
     public function create(){
