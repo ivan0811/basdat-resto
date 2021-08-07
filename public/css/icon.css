@@ -23,7 +23,7 @@
 }
 
 .icon-pegawai{
-    -webkit-mask-image: url(../img/icon/icon-menu.svg);
+    -webkit-mask-image: url(../img/icon/icon-pegawai.svg);
 }
 
 .icon-logout{
@@ -51,6 +51,20 @@
     -webkit-mask-image: url(../img/icon/icon-cart-add.svg);    
 }
 
+.logo{
+    background-image: url(../img/icon/logo.svg); 
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+}
+
+.shouba{
+    background-image: url(../img/icon/shouba.svg); 
+    width: 150px;
+    height: 45px;
+    background-repeat: no-repeat;
+}
+
 .img-detail-menu{
     background-image: url(../img/detail_menu.svg);    
     height: 160px;
@@ -71,10 +85,12 @@
 
 .icon-16{
     height: 16px;
+    width: 16px;
 }
 
 .icon-32{
     height: 32px;
+    width: 32px;
 }
 
 .icon-48{
@@ -88,11 +104,11 @@
 }
 
 .icon.grey-dark{
-    background-color: #9A9590;
+    background-color: #D0D0D0;
 }
 
 .icon.active{
-    background-color: #CC915A;
+    background-color: #FEBD2E;
 }
 
 .icon.white{

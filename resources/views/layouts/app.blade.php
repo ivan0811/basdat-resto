@@ -35,36 +35,47 @@
         <div class="container py-4 h-100">
             <div class="d-flex flex-column h-100">
                 <div class="list-group mb-auto">
+                        <a href="#" class="list-group-item list-group-item-action text-center">
+                            <div class="logo ml-2"></div>
+                        </a>
                     @if (\Auth::user()->role == 'admin')
-                        <a href="#" class="list-group-item list-group-item-action {{Request::segment(1) == 'home' ? 'active' : ''}}">
+                        <a href="#" class="list-group-item list-group-item-action {{Request::segment(1) == 'home' ? 'active' : 'grey-sidebar'}}">
+                            <span class="{{Request::segment(1) == 'home' ? 'active' : 'grey-dark'}} icon-24 icon-mask icon icon-home"></span>
                             Home
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action {{Request::segment(1) == 'menu' ? 'active' : ''}}">
+                        <a href="#" class="list-group-item list-group-item-action {{Request::segment(1) == 'menu' ? 'active' : 'grey-sidebar'}}">
+                            <span class="{{Request::segment(1) == 'menu' ? 'active' : 'grey-dark'}} icon-24 icon-mask icon icon-list"></span>
                             Menu
                         </a>    
-                        <a href="#" class="list-group-item list-group-item-action {{Request::segment(1) == 'riwayat' ? 'active' : ''}}">
+                        <a href="#" class="list-group-item list-group-item-action {{Request::segment(1) == 'riwayat' ? 'active' : 'grey-sidebar'}}">
+                            <span class="{{Request::segment(1) == 'riwayat' ? 'active' : 'grey-dark'}} icon-24 icon-mask icon icon-history"></span>
                             Riwayat
                         </a>    
-                        <a href="#" class="list-group-item list-group-item-action {{Request::segment(1) == 'pegawai' ? 'active' : ''}}">
+                        <a href="#" class="list-group-item list-group-item-action {{Request::segment(1) == 'pegawai' ? 'active' : 'grey-sidebar'}}">
+                            <span class="{{Request::segment(1) == 'pegawai' ? 'active' : 'grey-dark'}} icon-24 icon-mask icon icon-pegawai"></span>
                             Pegawai
                         </a>                  
                     @else
-                    <a href="#" class="list-group-item list-group-item-action {{Request::segment(1) == 'menu' ? 'active' : ''}}">
+                    <a href="#" class="list-group-item list-group-item-action {{Request::segment(1) == 'menu' ? 'active' : 'grey-sidebar'}}">
+                        <span class="{{Request::segment(1) == 'menu' ? 'active' : 'grey-dark'}} icon-24 icon-mask icon icon-list"></span>
                         Menu
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action {{Request::segment(1) == 'riwayat' ? 'active' : ''}}">
+                    <a href="#" class="list-group-item list-group-item-action {{Request::segment(1) == 'riwayat' ? 'active' : 'grey-sidebar'}}">
+                        <span class="{{Request::segment(1) == 'riwayat' ? 'active' : 'grey-dark'}} icon-24 icon-mask icon icon-history"></span>
                         Riwayat
                     </a>                  
                     @endif                    
                 </div>            
                 <div class="list-group mt-auto">
                     <a href="#" class="list-group-item list-group-item-action">
+                        <span class="{{Request::segment(1) == 'profile' ? 'active' : 'grey-dark'}} icon-24 icon icon-user"></span>
                         Profile
                       </a>                 
                       <form action="/logout" id="logout" method="POST">
                           @csrf
                     </form>     
                         <a href="#" onclick="document.querySelector('#logout').submit()" class="list-group-item list-group-item-action">
+                            <span class="grey-dark icon-24 icon icon-logout"></span>
                           Logout
                         </a>                  
                 </div>                            

@@ -34,29 +34,29 @@
         <div class="col-6">
             <div class="card border-0 p-4">
                 <div class="">
-                
+                    <span class="active icon-32 icon icon-pegawai"></span>
                 </div>
                 <div class="">
-                    <p>Total Pegawai</p>                
-                    <h4>19</h4>
+                    <p class="mt-3 mb-0 subBody-text grey-dark-text">Total Pegawai</p>                
+                    <p class="admin-text">24</p>
                 </div>            
             </div>            
         </div>
         <div class="col-6">
             <div class="card border-0 p-4">
                 <div class="">
-                
+                    <span class="active icon-32 icon icon-menu"></span>
                 </div>
                 <div class="">
-                    <p>Total Menu</p>                
-                    <h4>19</h4>
+                    <p class="mt-3 mb-0 subBody-text grey-dark-text">Total Menu</p>                
+                    <p class="admin-text">24</p>
                 </div>            
             </div>  
         </div>
         <div class="col-12 mt-4">
             <div class="card border-0 p-4">
-                <div class="mb-3">
-                    <h4>Laporan Keuangan</h4>                
+                <div class="mb-3 align-self-center">
+                    <h4 class="">Laporan Keuangan</h4>                
                 </div>          
                 <div class="mb-3">
                     <p class="mb-2 secondary-text-color">Total Pemasukan</p>
@@ -67,7 +67,7 @@
                     <h4>Rp 500.293.241</h4>                    
                 </div>  
                 <div class="d-grid mt-3">
-                    <button class="btn color-primary w-100">Download PDF</button>
+                    <button class="btn py-2 color-primary w-100 button-text">Download PDF</button>
                 </div>    
             </div>   
         </div>

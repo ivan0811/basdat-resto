@@ -18,6 +18,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/color.css')}}">
+    <link rel="stylesheet" href="{{asset('css/icon.css')}}">
+    <link rel="stylesheet" href="{{asset('css/font.css')}}">
     <style>
         body, html{
             height: 100%;
@@ -34,7 +37,9 @@
                         <div class="col-md-5">
                             <div class="card custom-card border-0">                                                
                                 <div class="card-body p-5">
-
+                                    <div class="d-flex">
+                                        <div class="shouba mx-auto"></div>
+                                    </div>
                                     <form method="POST" action="{{ route('login') }}">
                                         @csrf
                                         <div class="mb-5">
