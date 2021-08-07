@@ -20,6 +20,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/color.css')}}">
+    <link rel="stylesheet" href="{{asset('css/icon.css')}}">
+    <link rel="stylesheet" href="{{asset('css/font.css')}}">
     <style>
         body{
             overflow-x: hidden;

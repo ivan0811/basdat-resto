@@ -2,8 +2,10 @@ body, html, aside.main-sidebar{
     height: 100%;
 }
 
-.custom-textfield{    
-    border: none;    
+.custom-textfield{ 
+    padding: 24px;   
+    border: none;
+    background-color: #FAFAFA !important;    
 }
 
 .custom-textfield.search{
@@ -12,7 +14,7 @@ body, html, aside.main-sidebar{
 }
 
 .custom-textfield:focus{
-    outline: none;  
+    border: none;  
 }
 
 .custom-btn{
@@ -126,4 +128,17 @@ aside.sidebar-right .detail-item > div{
 
 .detail-overflow-box{
     overflow-y: auto;    
+}
+
+.img-profile{
+    height: 50px !important;
+    width: 50px !important;
+}
+
+.no-decor{
+    text-decoration: none !important;
+}
+
+.btn-profile:hover{
+    background-color: #FEBD2E !important;
 }
