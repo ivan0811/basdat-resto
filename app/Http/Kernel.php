@@ -46,6 +46,10 @@ class Kernel extends HttpKernel
 
         'Admin' => [
             'Admin' => \App\Http\Middleware\Admin::class
+        ],
+
+        'Kasir' => [
+            'Kasir' => \App\Http\Middleware\Kasir::class
         ]
     ];
 

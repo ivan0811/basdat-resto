@@ -5,12 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Kuah;
 use App\Models\Menu;
+use Auth;
 
 class MenuController extends Controller
 {
-    public function show(){
-        $menu = Menu::with('kuah');           
-        return view('kasir.menu', compact('menu'));
+    public function show(){        
+        $menu = Menu::all();      
+        $kuah = Kuah::all();             
+        if(Auth::user()->role == 'admin'){            
+            return view('admin.menu', compact('menu', 'kuah'));
+        }else if(Auth::user()->role == 'kasir'){
+            return view('kasir.menu', compact('menu', 'kuah'));
+        }        
     }
 
     public function create(){

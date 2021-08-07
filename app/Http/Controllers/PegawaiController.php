@@ -10,7 +10,8 @@ use App\Models\Pegawai;
 class PegawaiController extends Controller
 {
     public function show(){
-        $user = User::all();        
+        $user = User::all();     
+        return view('admin.pegawai', compact('user'));
     }
 
     public function create(){

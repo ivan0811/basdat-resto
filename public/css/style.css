@@ -23,6 +23,18 @@ body, html, aside.main-sidebar{
     background-color: #FEBD2E;
 }
 
+.color-primary-outline{
+    background-color: #fff;    
+    color: #FEBD2E;
+    border: 1px solid #FEBD2E;
+}
+
+.color-primary-outline:hover{
+    background-color: #FEBD2E;    
+    color: #fff;
+    border: 1px solid #FEBD2E;
+}
+
 .primary-text-color{
     color: #FEBD2E;
 }

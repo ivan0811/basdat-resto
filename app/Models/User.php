@@ -44,6 +44,6 @@ class User extends Authenticatable
     
     public function pegawai()
     {
-        return $this->hasMany(Pegawai::class);
+        return $this->hasMany(Pegawai::class, 'user_id');
     }
 }

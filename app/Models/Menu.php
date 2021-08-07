@@ -9,7 +9,7 @@ class Menu extends Model
 {
     use HasFactory;
     protected $table = 'menu';
-    protected $fillable = ['kategori', 'nama', 'harga'];
+    protected $fillable = ['kategori', 'nama', 'harga', 'level'];
     
     public function detailTransaksi()
     {
