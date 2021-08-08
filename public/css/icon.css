@@ -51,6 +51,10 @@
     -webkit-mask-image: url(../img/icon/icon-cart-add.svg);    
 }
 
+.icon-bin{
+    -webkit-mask-image: url(../img/icon/icon-bin.svg);    
+}
+
 .logo{
     background-image: url(../img/icon/logo.svg); 
     width: 45px;

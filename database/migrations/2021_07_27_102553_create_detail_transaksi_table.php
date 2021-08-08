@@ -18,7 +18,6 @@ class CreateDetailTransaksiTable extends Migration
             $table->string('kd_transaksi');
             $table->bigInteger('menu_id')->unsigned();            
             $table->integer('qty');                      
-            $table->integer('level')->nullable()->default(null);  
             $table->timestamps();
 
             $table->foreign('kd_transaksi')

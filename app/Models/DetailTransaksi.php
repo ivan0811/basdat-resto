@@ -9,7 +9,7 @@ class DetailTransaksi extends Model
 {
     use HasFactory;
     protected $table = 'detail_transaksi';
-    protected $fillable = ['kd_transaksi', 'menu_id', 'kuah_id', 'qty', 'level'];
+    protected $fillable = ['kd_transaksi', 'menu_id', 'kuah_id', 'qty'];
     
     public function transaksi()
     {
@@ -24,5 +24,10 @@ class DetailTransaksi extends Model
     public function kuahDetail()
     {
         return $this->hasMany(KuahDetail::class);
+    }
+
+    public function level()
+    {
+        return $this->hasMany(Level::class);
     }
 }

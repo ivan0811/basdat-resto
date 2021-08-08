@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             KuahSeeder::class,
             TransaksiSeeder::class,
             DetailTransaksiSeeder::class,
-            KuahDetailSeeder::class
+            KuahDetailSeeder::class,
+            LevelSeeder::class
         ]);
     }
 }

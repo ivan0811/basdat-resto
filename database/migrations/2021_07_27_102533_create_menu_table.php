@@ -20,6 +20,7 @@ class CreateMenuTable extends Migration
             $table->integer('harga');    
             $table->string('foto', 100)->nullable()->default(null);        
             $table->boolean('level')->default(false);
+            $table->boolean('kuah')->default(false);
             $table->timestamps();
         });
     }

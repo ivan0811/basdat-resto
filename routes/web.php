@@ -25,10 +25,10 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::middleware(['web', 'auth'])->group(function () {
-    Route::middleware(['Kasir'])->group(function () {
-        Route::get('/menu', [MenuController::class, 'show'])->name('menu');
-    });
+Route::middleware(['web', 'auth'])->group(function () {    
+    Route::get('/menu', [MenuController::class, 'show'])->name('menu');
+
+    Route::post('/transaksi', [TransaksiController::class, 'store'])->name('transaksi');
 
     Route::prefix('riwayat')->group(function () {
         Route::get('/', [TransaksiController::class, 'show'])->name('riwayat');
@@ -36,12 +36,12 @@ Route::middleware(['web', 'auth'])->group(function () {
 
     Route::get('/profile', function () {
         return view("auth.profile");
-    });
+    })->name('profile');
 
     Route::middleware(['Admin'])->group(function () {
         // Route::get('/', [])->name();
         Route::prefix('pegawai')->group(function () {
-            Route::get('/', [PegawaiController::class, 'show'])->name('pegawai');
+            Route::get('/', [PegawaiController::class, 'show'])->name('pegawai');            
             Route::get('create', [PegawaiController::class, 'create'])->name('create_pegawai');
             Route::post('store', [PegawaiController::class, 'store'])->name('store_pegawai');
             Route::get('edit/{id}', [PegawaiController::class, 'edit'])->name('edit_pegawai');
@@ -49,8 +49,7 @@ Route::middleware(['web', 'auth'])->group(function () {
             Route::delete('delete/{id}', [PegawaiController::class, 'destroy'])->name('destroy_pegawai');
         });
 
-        Route::prefix('menu')->group(function () {
-            Route::get('/', [MenuController::class, 'show'])->name('menu');
+        Route::prefix('menu')->group(function () {            
             Route::get('create', [MenuController::class, 'create'])->name('create_menu');
             Route::post('store', [MenuController::class, 'storeMenu'])->name('store_menu');
             Route::get('edit/{id}', [MenuController::class, 'editMenu'])->name('edit_menu');

@@ -142,3 +142,33 @@ aside.sidebar-right .detail-item > div{
 .btn-profile:hover{
     background-color: #FEBD2E !important;
 }
+
+.click-card:hover{
+    cursor: pointer;
+}
+
+.custom-tabs{
+    cursor: pointer; 
+    border: 0;   
+}
+
+.custom-tabs.active{
+    background-color: #FFF5E1;
+    border: #FEBD2E 1px solid;    
+}
+
+.lv-checkbox.active{
+    background-color: #FEBD2E;    
+}
+
+.lv-checkbox:hover{
+    cursor: pointer;
+}
+
+.card-pointer:hover{
+    cursor: pointer;
+}
+
+button.btn:focus{
+    box-shadow: inset 0 -1px 0 #ddd;
+}
