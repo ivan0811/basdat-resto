@@ -37,6 +37,8 @@ class MenuController extends Controller
             'nama' => $req->nama,
             'harga' => $req->harga
         ]);
+
+        return redirect()->back();
     }
 
     public function storeKuah(Request $req)
@@ -67,6 +69,8 @@ class MenuController extends Controller
         $menu->nama = $req->nama;
         $menu->harga = $req->harga;
         $menu->save();
+
+        return redirect()->back();
     }
 
     public function updateKuah(Request $req, $id)
@@ -79,6 +83,7 @@ class MenuController extends Controller
     public function destroyMenu($id)
     {
         Menu::findOrFail($id)->delete();
+        return redirect()->back();
     }
 
     public function destroyKuah($id)
